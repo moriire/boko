@@ -1,7 +1,7 @@
 import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
 import axios from "axios"
-const BASE = "http://127.0.0.1:8000"
+const BASE = location.origin;
 import { useAuthStore } from "@/stores/auth"
 export const useBookStore = defineStore('counter', () => {
   const auth = useAuthStore();
