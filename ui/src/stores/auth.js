@@ -1,7 +1,6 @@
 //<script>
 //eslint-disable /
-const BASE = "http://127.0.0.1:8000"
-//const BASE = "http://127.0.0.1:5173";
+const BASE = location.origin;
 import alertify from "alertifyjs"
 import axios from "axios";
 import { defineStore } from "pinia"
