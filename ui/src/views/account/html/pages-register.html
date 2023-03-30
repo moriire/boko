@@ -1,0 +1,71 @@
+
+<div class="card">
+  <div class="card-body">
+
+    <div class="title card-header">
+      <h5 class="card-title text-center">Register</h5>
+      <p class="text-center small text-danger"></p>
+    </div>
+
+    <form  @submit.prevent="registerForm">
+      <div class="form-row row">
+        <div class="col-12 mb-2">
+          <div class="input-group">
+            <input type="text" placeholder="Full name(surname first)" autocomplete="name" class="form-control" id="full_name" required v-model="stores.regForm.full_name">
+            
+          </div>
+        </div>
+      </div>
+        <div class="form-row row">
+          <div class="col-xs-12 col-sm-10 col-md-6 mb-2">
+            <div class="input-group">
+              
+              <input type="email" placeholder="email" autocomplete="email" class="form-control" id="email" required v-model="stores.regForm.email">
+              
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-10 col-md-6 mb-2">
+            <div class="input-group">
+              <select class="form-select" id="role" required v-model="stores.regForm.role">
+                <option disabled selected value="">Role</option>
+                <option value="A">Librarian 1</option>
+                <option value="B">Librarian 2</option>
+                <option value="C">Librarian 3</option>
+                <option value="D">Chief Librarian</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="form-row row">
+          <div class="col-xs-12 col-sm-10 col-md-6 mb-2">
+            <div class="input-group">
+              <input type="password" placeholder="Password" autocomplete="new-password" class="form-control" id="yourPassword1" required v-model="stores.regForm.password1">
+              
+            </div>
+          </div>
+      
+        
+          <div class="col-xs-12 col-sm-10 col-md-6 mb-2">
+            <div class="input-group">
+              <input type="password" placeholder="Confirm Password"  autocomplete="new-password" class="form-control" id="yourPassword2" required v-model="stores.regForm.password2">
+              
+            </div>
+          </div>
+        </div>
+    
+        <div class="form-row row">
+          <div class="col-12 mb-2 mt-3">
+            <div class="input-group">
+              <button class="btn btn-primary w-100" type="submit" >Sign up</button>
+            </div>
+          </div>
+        </div>
+        
+      <div class="col-12">
+        <p class="small mb-0">Already have an account? <router-link to="/login">Login</router-link></p>
+      </div>
+    </form>
+
+  </div>
+</div>
+

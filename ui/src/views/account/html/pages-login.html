@@ -1,0 +1,36 @@
+
+              <div class="card">
+
+                <div class="card-body">
+
+                  <div class="card-header">
+                    <h5 class="card-title text-center">Login</h5>
+                    
+                  </div>
+
+                  <form class="row g-2 justify-content-center" @submit.prevent="loginAction">
+
+                    <div class="col-12 mb-2">
+                      <div class="input-group">
+                        <input type="email" placeholder="Email" autocomplete class="form-control" id="email" required v-model="stores.loginForm.email">
+                      </div>
+                    </div>
+
+                    <div class="col-12">
+                      <div class="input-group">
+                        <input type="password" placeholder="password" autocomplete="new-password" class="form-control" id="yourPassword" required v-model="stores.loginForm.password">
+                        
+                      </div>
+                    </div>
+                    <div class="col-12 mb-2 mt-3">
+                      <div class="input-group">
+                        <button class="btn btn-primary w-100" type="submit" >Login</button>
+                      </div>
+                  </div>
+                    <div class="col-12">
+                      <p class="small mb-0">Don't have account? <router-link to="/register">Sign up</router-link></p>
+                    </div>
+                  </form>
+
+                </div>
+              </div>
