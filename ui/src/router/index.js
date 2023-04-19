@@ -15,8 +15,6 @@ function guardMyroute(to, from, next)
   let start = check? new Date(check).getTime(): 0,
   end = start - new Date().getTime(),
   refreshEnd = new Date(refreshTime).getTime() - new Date().getTime()
-  console.log(start)
-  console.log(end)
   if(end > 0 && refreshEnd>0) {
   //checkTime(globals.state.data.access_token)
     next()
@@ -74,7 +72,7 @@ const router = createRouter({
     },
     {
       path: '/books',
-      name: 'gen',
+      name: 'Books',
       beforeEnter: guardMyroute,
       component: GenLayout,
       children: [
