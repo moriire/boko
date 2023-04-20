@@ -104,7 +104,6 @@ const router = createRouter({
     }
   ]
 })
-
 export default router
 router.afterEach((to) =>{
   document.title = `${to.meta.title} | My Library`
