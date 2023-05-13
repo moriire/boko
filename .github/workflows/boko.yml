@@ -28,4 +28,4 @@ jobs:
       run: |
         python backend/manage.py test
     - name: Build the Docker image
-      run: docker build ./backend --tag $DOCKER_REPO:$(date +%s)
+      run: docker build -t $DOCKER_REPO:$(date +%s) ./backend
