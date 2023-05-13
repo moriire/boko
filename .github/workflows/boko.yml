@@ -10,11 +10,6 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-   
-
-
-
-
     steps:
     - uses: actions/checkout@v3
     - name: Set up Python 3.10
@@ -28,3 +23,11 @@ jobs:
     - name: Run Tests
       run: |
         python backend/manage.py test
+        
+    - name: Login to docker
+      run: |
+        docker login -u {{ DOCKER_USERNAME }} -p {{ DOCKER_PASSWORD }}
+    - name: Push image to docker hub
+      run: |
+        docker push 
+    
