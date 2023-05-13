@@ -15,7 +15,7 @@ jobs:
 
     runs-on: ubuntu-latest
     steps:
-    - run: echo "${{env.DOCKER_REPO}}"
+    - run: echo $DOCKER_REPO
     - uses: actions/checkout@v3
     - name: Set up Python 3.11.0
       uses: actions/setup-python@v3
