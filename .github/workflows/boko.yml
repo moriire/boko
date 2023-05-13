@@ -7,7 +7,7 @@ on:
     branches: [ "main" ]
     
 env:
-  DOCKER_REPO: ${{vars.DOCKER_REPO}}
+  DOCKER_REPO: ${{secrets.DOCKER_REPO}}
   DOCKER_USER: ${{vars.DOCKER_USERNAME}}
   DOCKER_PASS: ${{vars.DOCKER_PASSWORD}}
 jobs:
