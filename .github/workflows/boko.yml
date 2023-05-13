@@ -8,7 +8,7 @@ on:
     
 env:
   DOCKER_REPO: ${{vars.DOCKER_REPO}}
-  DOCKER_USER: ${{var.DOCKER_USERNAME}}
+  DOCKER_USER: ${{vars.DOCKER_USERNAME}}
   DOCKER_PASS: ${{vars.DOCKER_PASSWORD}}
 jobs:
   build:
