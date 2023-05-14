@@ -29,9 +29,10 @@ jobs:
       #run: |
         #python backend/manage.py test
     - name: Build the Docker image
-      run: docker build -t django-library-backend:$(date +%s) backend/
+      id: date
+      run: docker build -t django-library-backend:$(id +%s) backend/
 
     - name: Login to ducker hub
       run: docker login -u $DOCKER_USER -p $DOCKER_PASS
     - name: Pushing image to docker hub
-      run: docker push $DOCKER_REPO/django-library-backend:$(date +%s)
+      run: docker push $DOCKER_REPO/django-library-backend:$(id +%s)
