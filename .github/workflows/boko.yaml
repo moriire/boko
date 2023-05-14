@@ -15,7 +15,6 @@ jobs:
 
     runs-on: ubuntu-latest
     steps:
-    - id: date
 
     - run: echo $DOCKER_REPO
     - uses: actions/checkout@v3
@@ -32,9 +31,9 @@ jobs:
         #python backend/manage.py test
     - name: Build the Docker image
     
-      run: docker build -t django-library-backend:$(id +%s) backend/
+      run: docker build -t django-library-backend:v1 backend/
 
     - name: Login to ducker hub
       run: docker login -u $DOCKER_USER -p $DOCKER_PASS
     - name: Pushing image to docker hub
-      run: docker push $DOCKER_REPO/django-library-backend:$(id +%s)
+      run: docker push $DOCKER_REPO/django-library-backend:v1
