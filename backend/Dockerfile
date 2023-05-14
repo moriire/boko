@@ -3,7 +3,7 @@ RUN echo running
 WORKDIR /backend
 COPY . .
 RUN python3 -m pip install --upgrade pip
-RUN /bin/sh -c "apk add mysql-shell | apk add mariadb | apk add mysql-shell"
+RUN /bin/sh -c "apk add mysql-shell | apk add mariadb | apk add mysql-server"
 RUN python3 -m pip install -r requirements.txt
 EXPOSE 8000
 CMD ["python3", "manage.py", "runserver", "host=0.0.0.0"]
