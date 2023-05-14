@@ -36,4 +36,4 @@ jobs:
     - name: Login to ducker hub
       run: docker login -u $DOCKER_USER -p $DOCKER_PASS
     - name: Pushing image to docker hub
-      run: docker push $DOCKER_REPO/django-library-backend:v1
+      run: docker push $DOCKER_USER/django-library-backend:v1
