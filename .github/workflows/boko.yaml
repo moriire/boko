@@ -1,4 +1,4 @@
-name: DjangoBoko Library
+name: Django Boko Library
 
 on:
   push:
