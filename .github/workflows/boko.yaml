@@ -30,3 +30,8 @@ jobs:
         python backend/manage.py test
     - name: Build the Docker image
       run: docker build -t $DOCKER_REPO:$(date +%s) backend/
+
+    - name: Login to ducker hub
+      run: docker login -u $DOCKER_USER -p $DOCKER_PASS
+    - name: Pushing image to docker hub
+      run: docker push $DOCKER_REPO:$(date +%s)
